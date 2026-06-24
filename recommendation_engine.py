@@ -19,8 +19,16 @@ X_train, X_test, y_train, y_test = train_test_split(
 # Load trained model
 model = joblib.load("final_xgb_model.pkl")
 
-# Select one test sample
-sample = X_test.iloc[[0]]
+key_features = ['Frequency of Traveling by Air', 'Vehicle Monthly Distance Km',
+                'How Many New Clothes Monthly', 'Waste Bag Weekly Count']
+
+for i in range(5):
+    sample = X_test.iloc[[i]]
+    prediction = np.expm1(model.predict(sample))[0]
+    print(f"\nSample {i+1}: Predicted = {prediction:.2f} kg")
+    for feat in key_features:
+        if feat in sample.columns:
+            print(f"  {feat}: {sample[feat].values[0]}")
 
 # Predict footprint
 prediction = np.expm1(model.predict(sample))[0]
