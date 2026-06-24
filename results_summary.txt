@@ -1,0 +1,109 @@
+CARBON FOOTPRINT PROJECT - FINAL RESULTS SUMMARY
+
+====================================================
+DATASET
+====================================================
+
+Dataset Size: 10,000 rows
+Features After Encoding: 49 columns
+
+Target Variables:
+1. CarbonEmission
+2. CarbonEmission_log
+
+====================================================
+MODEL PERFORMANCE
+====================================================
+
+Linear Regression
+
+R² Score  : 0.8914
+RMSE      : 336.06 kg
+MAE       : 213.71 kg
+
+----------------------------------------------------
+
+Random Forest
+
+R² Score  : 0.9267
+RMSE      : 276.00 kg
+MAE       : 207.33 kg
+
+----------------------------------------------------
+
+Tuned XGBoost (Best Model)
+
+R² Score  : 0.9850
+RMSE      : 125.00 kg
+MAE       : 90.24 kg
+
+Best Parameters:
+
+n_estimators      = 400
+max_depth         = 5
+learning_rate     = 0.1
+subsample         = 0.9
+colsample_bytree  = 0.8
+
+====================================================
+SHAP EXPLAINABILITY RESULTS
+====================================================
+
+Top Features Influencing Carbon Emission:
+
+1. Frequency of Traveling by Air
+2. Vehicle Monthly Distance Km
+3. How Many New Clothes Monthly
+4. Waste Bag Weekly Count
+5. Heating Energy Source
+
+Key Observation:
+
+Transportation and travel behavior are the
+strongest contributors to carbon emissions.
+
+====================================================
+RECOMMENDATION ENGINE
+====================================================
+
+Sample Prediction:
+
+Predicted Carbon Emission:
+1102.12 kg
+
+Generated Recommendations:
+
+- Reduce air travel frequency
+- Reduce monthly driving distance
+- Reduce household waste
+- Improve recycling practices
+
+====================================================
+GENERATED FIGURES
+====================================================
+
+1. Correlation Heatmap
+2. Carbon Emission Distribution
+3. Vehicle Distance vs Carbon Emission
+4. Air Travel vs Carbon Emission
+5. Grocery Bill vs Carbon Emission
+6. New Clothes vs Carbon Emission
+7. Waste Bag Count vs Carbon Emission
+8. Transport Boxplot
+9. Diet Boxplot
+10. Actual vs Predicted Plot
+11. SHAP Summary Plot
+12. System Architecture Diagram
+
+====================================================
+PROJECT STATUS
+====================================================
+
+Day 1  Completed
+Day 2  Completed
+Day 3  Completed
+Day 4  Completed
+Day 5  Completed
+
+Overall Technical Completion:
+98%
